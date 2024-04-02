@@ -9,6 +9,7 @@ public class Team {
 
     public Team(String teamName, char team, int numOfPawns)
     {
+        this.teamName = teamName;
         this.pawns = new Pawn[numOfPawns];
         this.team = team;
         givePawns();
@@ -21,5 +22,21 @@ public class Team {
             this.pawns[i] = new Pawn(this.team);
         }
     }
+
+    public Pawn[] getPawns()
+    {
+        return this.pawns;
+    }
+
+    public String getTeamName()
+    {
+        return this.teamName;
+    }
+
+    public char getTeam()
+    {
+        return this.team;
+    }
+
 
 }
